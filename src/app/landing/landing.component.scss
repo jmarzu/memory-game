@@ -1,0 +1,24 @@
+.memory-card {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &.disabled {
+    pointer-events: none;
+    opacity: .5;
+  }
+
+  .memory-card-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+a {
+  cursor: pointer;
+}

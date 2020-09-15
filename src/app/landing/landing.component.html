@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Memory Game</h1>
+  <a tabindex (click)="restartGame()">Play again</a>
+</div>
+
+<div class="container mb-3 d-flex flex-wrap w-75">
+  <div *ngFor="let card of boardValues">
+    <div class="memory-card m-3"
+        [ngClass]="{'bg-primary': selected[card.id],'bg-success': matchedValues[card.id], 'disabled': disableCard}"
+        (click)="selectCard(card)">
+      <div class="memory-card-body"><h2>{{(selected[card.id] || matchedValues[card.id]) ? card.label : '?'}}</h2></div>
+    </div>
+  </div>
+</div>
